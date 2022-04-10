@@ -1,0 +1,14 @@
+# /etc/systemd/system/autostartup.service
+[Unit]
+Description=Receive alltopic
+After=default.target
+
+[Service]
+User=pi
+Type=simple
+RemainAfterExit=yes
+ExecStart=/home/pi/Desktop/now/autostartup
+TimeoutStartSec=0
+
+[Install]
+WantedBy=default.target
